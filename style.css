@@ -1,0 +1,25 @@
+body {
+	display: grid;
+	width: 100%;
+	min-height: 100vh;
+  grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 57ch) minmax(1.2rem, 1fr);
+}
+
+body * {
+	border: 1px dashed black;
+}
+
+
+header {
+	background-color: red;
+	grid-column: 1 / 4;
+
+}
+
+main {
+ 
+}
+
+footer {
+	grid-column: 1 / 4;
+}
