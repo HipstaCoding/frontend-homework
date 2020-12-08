@@ -1,84 +1,102 @@
-html {
-  font-family: "Montserrat", sans-serif;
-  background-color: #282c34;
-  font-size: 1rem; /* 1rem = 16px в браузере по-умолчанию */
-  line-height: 1.5; /* ширина строки в 1.5 раза больше шрифта - как по ДСТУ диплома */
-  text-indent: 1em; /* Сдела отступ у всего текста, чтобы не прилипал к краю */
-  color: #F2F7FD;
+header, nav, aside, section, footer, main, article {
+	/* помечаю границы блока с помощью border, потом удалю */
+	border: 1px dashed black;
 }
 
-p {
-  padding: 0 1em; /* чтобы 2рая строка не прижималась к границам сайта */
-  text-indent: 2em; /* переопределяем глобальный отступ первой строки, чтобы он был у параграфа */
+body {
+	display: grid;
+	/* минимальная высота всего сайта 100% от высоты экрана*/
+	min-height: 100vh;
+	/* сетка поделеная на 5 столбцов, первый и последний занимают относительное пространство,
+		2, 3, 4 - по 400px */
+	grid-template-columns: 1fr 400px 400px 400px 1fr;
+	/* первый ряд занимает весь экран минус размер навигации, навигация занимает 50px,
+		остальные ряды задаются автоматически */
+	grid-template-rows: calc(100vh - 50px) 50px;
+	/* далее я поделил сайт на области, . - пустая область */
+	grid-template-areas: 
+		"header header header header header"
+		"nav nav nav nav nav"
+		". photo about about ."
+		"skills skills skills skills skills"
+		". school school school ."
+		"blog blog blog blog blog"
+		"contacts contacts contacts contacts contacts";
+	/* все новые ряды занимают минимум 200px и максимум высоту его контента */
+	grid-auto-rows: minmax(200px, max-content);
 }
 
-/* Два селектора пишутся через запятую */
-ul, ol {
-  /* У всех списков стандартный отступ в 40px, меняем его на относительный как и text-indent */
-  padding-left: 2em;
-  /* Ставим точки и цифры внутрь */
-  list-style-position: inside;
+header {
+	/*  занимает полностью область header */
+	grid-area: header;
+	/* выравниваем все содержимое по центру с помощью flexbox */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	/* распологаем background-image */
+	background-image: url(./resources/images/header-background.jpg);
+	background-position: center;
+	background-size: cover;
+
+	color: white;
 }
 
-h1 {
-  /* Чтобы выделялся заголовок больше в 3 раза чем обычный текст, стандартные 2em мало для меня */
-  font-size: 3em;
+nav {
+	grid-area: nav;
+	background-color: #C57BDD;
 }
 
-h2 {
-  /* Вот тут 2em в самый раз */
-  font-size: 2em;
+aside {
+	grid-area: photo;
+	background-color: #E44D26;
 }
 
-h3 {
-  font-size: 1.6em;
-  /* Подсветил пункты резюме just for fun */
-  color: #53C1DF;
+#about-me {
+	grid-area: about;
+	background-color: #F7DF1E;
 }
 
-h4 {
-  font-size: 1.4em;
+main {
+	grid-area: skills;
+	background-color: #53C1DF;
 }
 
-h5 {
-  font-size: 1.2em;
-  font-weight: normal;
-  /* Крастный, чтобы люди обратили внимание, как долго я работал */
-  color: #e06c75;
+#hipsta-coding-school {
+	grid-area: school;
+	background-color: #282c34;
+	color: #F2F7FD;
 }
 
-h6 {
-  font-size: 1em;
+#blog-posts-section {
+	grid-area: blog;
+	display: flex;
+	/* секция блогов состоит из заголовка, постов и секции read more и распологается друг за другом
+		по вертикали (в столбик) */
+	flex-direction: column;
+	background-color: #35CC7F;
 }
 
-/* strong - семантический тег, который показывает то, что имеет большое значение */
-strong {
-  font-family: 'Press Start 2P', cursive;
-  vertical-align: bottom; /* шрифт пополз вверх, я его выравнял по нижнему краю */
+#blog-posts {
+	display: flex;
+	/* хочу чтобы посты тоже были "гибкими", по умолчанию flex-direction: row; и я задаю свойство 
+		flex-grow: 1, чтобы эта секция занимала все свободное место */
+	flex-grow: 1;
 }
 
-a {
-  color: #C57BDD;
-  /* убираем дыбильное подчеркивание */
-  text-decoration: none;
+.blog-post {
+	/* а тут я хочу, чтобы каждый пост занял все свободное пространство по высоте и ширине, и каждый
+		занимал одну часть (то есть поровну) */
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-height: 300px;
 }
 
-/* класс, так как я хочу чтобы только один список был в 2 столбца, в будущем могу переиспользовать */
-.two-column-list {
-  columns: 2; 
+.read-more-container {
+	min-height: 100px;
 }
 
-/* эта штуку буду использовать часто */
-.center {
-  text-align: center;
-}
-
-/* если надо что-то подсветить */
-.highlight {
-  color: #F7DF1E;
-}
-
-/* галерея для меня особый пункт и у нее есть id, почему б это не использовать */
-#gallery {
-  text-align: center;
+footer {
+	grid-area: contacts;
+	background-color: #383D46;
 }
