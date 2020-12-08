@@ -1,25 +1,86 @@
-body {
-	display: grid;
-	width: 100%;
-	min-height: 100vh;
-  grid-template-columns: minmax(1.2rem, 1fr) minmax(auto, 57ch) minmax(1.2rem, 1fr);
-}
-
-body * {
+header, nav, aside, section, footer, main, article {
 	border: 1px dashed black;
 }
 
+body {
+	display: grid;
+	min-height: 100vh;
+	grid-template-columns: 1fr 400px 400px 400px 1fr;
+	grid-template-rows: calc(100vh - 50px) 50px;
+	grid-template-areas: 
+		"header header header header header"
+		"nav nav nav nav nav"
+		". photo about about ."
+		"skills skills skills skills skills"
+		". school school school ."
+		"blog blog blog blog blog"
+		"contacts contacts contacts contacts contacts";
+	grid-auto-rows: minmax(200px, 400px);
+}
 
 header {
-	background-color: red;
-	grid-column: 1 / 4;
+	grid-area: header;
+	display: grid;
+	justify-content: center;
+	align-items: center;
 
+	background-image: url(./resources/images/header-background.jpg);
+	background-position: center;
+	background-size: cover;
+
+	color: white;
+}
+
+nav {
+	grid-area: nav;
+	background-color: #C57BDD;
+}
+
+aside {
+	grid-area: photo;
+	background-color: #E44D26;
+}
+
+#about-me {
+	grid-area: about;
+	background-color: #F7DF1E;
 }
 
 main {
- 
+	grid-area: skills;
+	background-color: #53C1DF;
+}
+
+#hipsta-coding-school {
+	grid-area: school;
+	background-color: #282c34;
+	color: #F2F7FD;
+}
+
+#blog-posts-section {
+	grid-area: blog;
+	display: flex;
+	flex-direction: column;
+	background-color: #35CC7F;
+}
+
+#blog-posts {
+	display: flex;
+	flex-grow: 1;
+}
+
+.blog-post {
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: 400px;
+	flex-wrap: wrap;
+}
+
+.read-more-container {
+	min-height: 100px;
 }
 
 footer {
-	grid-column: 1 / 4;
+	grid-area: contacts;
+	background-color: #383D46;
 }
