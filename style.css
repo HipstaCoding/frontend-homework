@@ -1,4 +1,5 @@
 header, nav, aside, section, footer, main, article {
+	/* помечаю границы блока с помощью border, потом удалю */
 	border: 1px dashed black;
 }
 
