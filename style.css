@@ -1,6 +1,17 @@
-header, nav, aside, section, footer, main, article {
+footer, main, article {
 	/* помечаю границы блока с помощью border, потом удалю */
 	border: 1px dashed black;
+}
+
+html {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 1.5;
+	font-size: 16px;
+	letter-spacing: 0.02em;
+}
+
+p {
+	color: #777;
 }
 
 body {
@@ -12,7 +23,7 @@ body {
 	grid-template-columns: 1fr 400px 400px 400px 1fr;
 	/* первый ряд занимает весь экран минус размер навигации, навигация занимает 50px,
 		остальные ряды задаются автоматически */
-	grid-template-rows: calc(100vh - 50px) 50px;
+	grid-template-rows: calc(100vh - 60px) 60px;
 	/* далее я поделил сайт на области, . - пустая область */
 	grid-template-areas: 
 		"header header header header header"
@@ -24,6 +35,10 @@ body {
 		"contacts contacts contacts contacts contacts";
 	/* все новые ряды занимают минимум 200px и максимум высоту его контента */
 	grid-auto-rows: minmax(200px, max-content);
+}
+
+h2 {
+	margin: 0;
 }
 
 header {
@@ -44,17 +59,110 @@ header {
 
 nav {
 	grid-area: nav;
-	background-color: #C57BDD;
+	border-top: 3px solid #C9BFBC;
+	border-bottom: 3px solid #C9BFBC;
+	background-color: black;
+}
+
+.header-links-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.header-link {
+	height: calc(100% + 6px);
+	display: inline-flex;
+	align-items: center;
+	text-transform: uppercase;
+	padding: 0 25px;
+	color: #C9BFBC;
+	text-decoration: none;
+	letter-spacing: 0.2em;
+}
+
+.header-link:hover {
+	color: #6e6562;
+	transition: color 0.3s;
+	border-bottom: 3px solid #6e6562;
+	border-top: 3px solid #6e6562;
+	padding-bottom: 3px;
+	padding-top: 3px;
 }
 
 aside {
 	grid-area: photo;
-	background-color: #E44D26;
+}
+
+.my-photo {
+	background-image: url(./resources/images/photo.jpg);
+	background-size: cover;
 }
 
 #about-me {
 	grid-area: about;
-	background-color: #F7DF1E;
+	padding: 30px 40px;
+	font-size: 20px;
+}
+
+#about-me b {
+	color: #C57BDD;
+}
+
+.social-icons {
+	display: flex;
+	align-items: center;
+}
+
+.social-icons i {
+	font-size: 2.5em;
+	color: black;
+	transition: color 0.3s;
+	height: 100%;
+	text-align: center;
+	padding: 0 20px;
+}
+
+.social-icons a:first-child .fab {
+	padding-left: 0;
+}
+
+.social-icons .fa-instagram:hover {
+	color: #C13584;
+}
+
+.social-icons .fa-telegram-plane:hover {
+	color: #27A8EA;
+}
+
+.social-icons .fa-soundcloud:hover {
+	color: #FF4301;
+}
+
+.social-icons .fa-envelope:hover {
+	color: #C57BDD;
+}
+
+.button {
+	text-decoration: none;
+	border-radius: 2px;
+	border: 2px solid #151515;
+	color: #151515;
+	padding: 8px 37px;
+	font-size: 20px;
+	letter-spacing: 0.2em;
+	display: inline-block;
+	transition: all 0.3s;
+}
+
+.button:hover {
+	background-color: #151515;
+	color: white;
+}
+
+.cv-button {
+	margin-top: 40px;
+	margin-bottom: 30px;
 }
 
 main {
@@ -62,13 +170,13 @@ main {
 	background-color: #53C1DF;
 }
 
-#hipsta-coding-school {
+#works {
 	grid-area: school;
 	background-color: #282c34;
 	color: #F2F7FD;
 }
 
-#blog-posts-section {
+#blog {
 	grid-area: blog;
 	display: flex;
 	/* секция блогов состоит из заголовка, постов и секции read more и распологается друг за другом
