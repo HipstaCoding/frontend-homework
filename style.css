@@ -79,16 +79,26 @@ nav {
 	color: #C9BFBC;
 	text-decoration: none;
 	letter-spacing: 0.2em;
+	border-right: 3px solid #C9BFBC;
+}
+
+.header-link:first-child {
+	border-left: 3px solid #C9BFBC;
 }
 
 .header-link:hover {
 	color: #6e6562;
 	transition: color 0.3s;
-	border-bottom: 3px solid #6e6562;
-	border-top: 3px solid #6e6562;
+	border: 3px solid #6e6562;
 	padding-bottom: 3px;
 	padding-top: 3px;
+	margin-left: -3px;
 }
+
+.header-link:first-child:hover {
+	margin-left: 0;
+}
+
 
 aside {
 	grid-area: photo;
