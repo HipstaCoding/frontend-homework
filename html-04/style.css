@@ -137,7 +137,6 @@ nav {
 
 .portfolio-background {
   background-image: url("../common/images/portfolio-background.jpg");
-  background-color: rgba(0, 0, 0, 0.5);
   background-size: cover;
   background-position: center;
   min-height: 300px;

@@ -13,9 +13,11 @@
   align-items: center;
 }
 
-.text-open-sans {
+.font-open-sans {
   font-family: "Open Sans", sans-serif;
 }
+
+
 
 .section-heading {
   border: 8px solid black;
@@ -116,23 +118,11 @@ hr {
   text-align: center;
 }
 
-.skill-html {
-  background-image: url("../common/icons/html.png");
-}
-
-.skill-css {
-  background-image: url("../common/icons/css.png");
-}
-
 .picture {
   flex: 1 1 auto;
   min-width: 400px;
   max-width: 640px;
   min-height: 400px;
-}
-
-.picture:hover {
-
 }
 
 .picture:nth-child(1) {
