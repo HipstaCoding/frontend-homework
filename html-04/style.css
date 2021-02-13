@@ -49,35 +49,16 @@ header {
   padding-top: 50px;
 }
 
-.header-pre-title {
-  margin-top: 230px;
-  font-size: 40px;
-}
-
-.header-title {
-  margin-top: 50px;
-  margin-bottom: 30px;
-  font-size: 80px;
-}
-
-.header-post-title {
-  color: #909090;
-}
-
-.icons {
+.header-icons-container {
   min-height: 55px;
+}
+
+hr {
+	margin: 100px 0;
 }
 
 nav {
   min-height: 45px;
-}
-
-hr {
-  background-image: url("../commom/images/hr.png");
-  width: 170px;
-  height: 12px;
-  border: 0;
-  margin: 80px auto;
 }
 
 #hire-me {
