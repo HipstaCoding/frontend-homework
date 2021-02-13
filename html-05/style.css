@@ -1,7 +1,6 @@
 html {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
-
   line-height: 1.5;
 }
 
@@ -13,17 +12,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-/* обязательное условие, скопируйте его */
-div,
-figure,
-nav {
-  border: 1px dashed black;
-}
-
-body > * {
-  border: 2px dashed black;
-}
-
 figure {
   margin: 0;
 }
@@ -31,5 +19,3 @@ figure {
 p {
   margin: 0;
 }
-
-/* ---- */
