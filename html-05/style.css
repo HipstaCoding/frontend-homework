@@ -22,33 +22,27 @@ header {
 
 .header-wrapper {
   max-width: 1360px;
-  margin: 0 auto;
   height: 100%;
   display: flex;
 }
 
-.header-left {
+.header-column {
   width: 50%;
   padding-top: 50px;
 }
 
-.header-right {
-  width: 50%;
-  padding-top: 50px;
-}
-
-.header-pre-title {
+.header-column h3 {
   margin-top: 230px;
   font-size: 40px;
 }
 
-.header-title {
+.header-column h1 {
   margin-top: 50px;
   margin-bottom: 30px;
   font-size: 80px;
 }
 
-.header-post-title {
+.header-column h2 {
   color: #909090;
 }
 
@@ -61,7 +55,7 @@ nav {
 }
 
 hr {
-  background-image: url("../commom/images/hr.png");
+  background-image: url("../common/images/hr.png");
   width: 170px;
   height: 12px;
   border: 0;
