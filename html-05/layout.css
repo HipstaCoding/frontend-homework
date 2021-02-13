@@ -1,3 +1,183 @@
-.block-center {
-  margin: 0 auto;
+header {
+  min-height: 100vh;
+  height: 1px;
 }
+
+.header-wrapper {
+  max-width: 1360px;
+  height: 100%;
+  display: flex;
+}
+
+.header-column {
+  width: 50%;
+  padding-top: 50px;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  padding: 50px 0;
+}
+
+.header-left > div {
+  flex-grow: 1;
+}
+
+.header-titles-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.header-titles-container > * {
+  margin: 0;
+}
+
+.header-pre-title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.header-title {
+  margin: 0;
+  font-size: 80px;
+}
+
+.header-icons-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons-container .social-icon {
+  margin-right: 30px;
+}
+
+.header-right {
+  background-color: black;
+}
+
+.header-navigation {
+  min-height: 45px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-navigation .nav-link {
+  margin-right: 5px;
+}
+
+.header-navigation .nav-link:last-child {
+  margin-right: 0;
+}
+
+#hire-me {
+  min-height: 300px;
+  background-color: #1d1d1d;
+  color: white;
+  padding: 50px 100px;
+}
+
+#about-me {
+  min-height: 1000px;
+}
+
+.about-info {
+  margin-top: 70px;
+  max-width: 760px;
+}
+
+.about-services {
+  text-align: left;
+  max-width: 1060px;
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-service {
+  flex-shrink: 0;
+  width: 490px;
+  min-height: 182px;
+}
+
+.skills-wrapper {
+  margin-top: 80px;
+  max-width: 1000px;
+  padding: 0 50px;
+  text-align: left;
+}
+
+.skills-wrapper h3 {
+  margin-bottom: 50px;
+}
+
+.portfolio-background {
+  background-image: url("../common/images/portfolio-background.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+
+.picture:hover .overlay {
+  display: flex;
+}
+
+.picture .overlay {
+  font-style: italic;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 400px;
+  flex-wrap: wrap;
+}
+
+.gallery p {
+  font-size: 20px;
+}
+
+#portfolio {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+#portfolio p {
+  min-height: 70px;
+}
+
+.works-selector {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#contacts {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-form {
+  width: 600px;
+  height: 500px;
+}
+
+footer {
+  flex-direction: column;
+  background-color: #1a1a1a;
+  min-height: 300px;
+  color: white;
+}
+

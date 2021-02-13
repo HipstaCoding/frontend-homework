@@ -1,0 +1,179 @@
+.block-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-open-sans {
+  font-family: "Open Sans", sans-serif;
+}
+
+.section-heading {
+  border: 8px solid black;
+  margin: 0 auto;
+  width: 480px;
+  height: 110px;
+  font-family: "Montserrat", sans-serif;
+  color: black;
+}
+
+.gray-text {
+  color: #909090;
+}
+
+.social-icon {
+  background: #C4C4C4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 55px;
+  height: 60px;
+  font-size: 2.5em;
+  color: black;
+}
+
+.social-icon:hover {
+  transition: all 0.3s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+hr {
+  background-image: url("../common/images/hr.png");
+  width: 170px;
+  height: 12px;
+  border: 0;
+  margin: 80px auto;
+}
+
+.nav-link {
+  padding: 15px 40px;
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+
+.nav-link.highlighted {
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+}
+
+.nav-link:hover {
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+}
+
+.nav-link.highlighted:hover {
+  background-color: yellow;
+}
+
+.gradient-section {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%),
+    #ffffff;
+  text-align: center;
+  padding: 140px 0;
+}
+
+.heading-uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.18538em;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.skill {
+  flex-shrink: 0;
+  width: 170px;
+  min-height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  font-size: 24px;
+  font-family: "Montserat", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.13538em;
+  font-weight: 300;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.skill figcaption {
+  margin-top: 20px;
+  flex: 1 0;
+  height: 52px;
+  text-align: center;
+}
+
+.skill-html {
+  background-image: url("../common/icons/html.png");
+}
+
+.skill-css {
+  background-image: url("../common/icons/css.png");
+}
+
+.picture {
+  flex: 1 1 auto;
+  min-width: 400px;
+  max-width: 640px;
+  min-height: 400px;
+}
+
+.picture:hover {
+
+}
+
+.picture:nth-child(1) {
+  background-image: url("https://picsum.photos/640/400?random=1");
+}
+.picture:nth-child(2) {
+  background-image: url("https://picsum.photos/640/400?random=2");
+}
+.picture:nth-child(3) {
+  background-image: url("https://picsum.photos/640/400?random=3");
+}
+.picture:nth-child(4) {
+  background-image: url("https://picsum.photos/640/400?random=4");
+}
+.picture:nth-child(5) {
+  background-image: url("https://picsum.photos/640/400?random=5");
+}
+.picture:nth-child(6) {
+  background-image: url("https://picsum.photos/640/400?random=6");
+}
+
+.skill-ukraine { 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.prapor {
+  height: 100px;
+  width: 100px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.nebo {
+  background-color: skyblue;
+  height: 50%;
+}
+
+.pshenica {
+  background-color: wheat;
+  height: 50%;
+}
+
