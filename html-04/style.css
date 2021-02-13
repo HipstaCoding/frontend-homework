@@ -1,0 +1,202 @@
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.5;
+}
+
+/* обязательное условие, скопируйте его */
+div,
+nav {
+  border: 1px dashed black;
+}
+
+body > * {
+  border: 2px dashed black;
+}
+/* ---- */
+
+header {
+  min-height: 100vh;
+  height: 1px;
+}
+
+.header-wrapper {
+  max-width: 1360px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+}
+
+.header-left {
+  width: 50%;
+  padding-top: 50px;
+}
+
+.header-right {
+  width: 50%;
+  padding-top: 50px;
+}
+
+.header-pre-title {
+  margin-top: 230px;
+  font-size: 40px;
+}
+
+.header-title {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size: 80px;
+}
+
+.header-post-title {
+  color: #909090;
+}
+
+.icons {
+  min-height: 55px;
+}
+
+nav {
+  min-height: 45px;
+}
+
+hr {
+  background-image: url("../images/hr.png");
+  width: 170px;
+  height: 12px;
+  border: 0;
+  margin: 80px auto;
+}
+
+#hire-me {
+  min-height: 300px;
+  background-color: #1d1d1d;
+  color: white;
+  padding: 50px 100px;
+}
+
+#about-me {
+  min-height: 1000px;
+}
+
+.about-info {
+  margin-top: 70px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.gradient-section {
+  background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%),
+    #ffffff;
+  text-align: center;
+  padding: 140px 0;
+}
+
+.about-services {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 1060px;
+  min-height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.about-services h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.18538em;
+}
+
+.about-service {
+  flex-shrink: 0;
+  width: 490px;
+  min-height: 182px;
+}
+
+.skills-wrapper {
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 0 50px;
+  text-align: left;
+}
+
+.skills-wrapper h3 {
+  text-transform: uppercase;
+  letter-spacing: 0.18538em;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.skill {
+  flex-shrink: 0;
+  width: 170px;
+  height: 170px;
+}
+
+#portfolio {
+  background-color: #1a1a1a;
+  min-height: 1200px;
+  color: white;
+}
+
+.portfolio-background {
+  background-image: url("./images/portfolio-background.jpg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 400px;
+  flex-wrap: wrap;
+}
+
+.works-selector {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.picture {
+  flex: 1 1 auto;
+  min-width: 400px;
+  max-width: 640px;
+  min-height: 400px;
+  background-color: aqua;
+}
+
+.gallery-more {
+  text-align: center;
+}
+
+#contacts {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-form {
+  width: 600px;
+  height: 500px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a1a1a;
+  min-height: 300px;
+  color: white;
+}
